@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'differenziata-front-end-a';
+  title = 'differenziata-front-end';
 }
