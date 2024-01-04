@@ -8,6 +8,7 @@ import { NotificationService } from './service/notification.service';
 })
 export class AppComponent {
   title = 'differenziata-front-end';
+  esitoClick: string = '';
 
   constructor(
     private notificationService: NotificationService
@@ -16,10 +17,12 @@ export class AppComponent {
   }
 
   scheduleNotification() {
-    const scheduledTime = new Date('2024-01-04T12:30:00'); // Imposta l'orario desiderato
+    const scheduledTime = new Date('2024-01-04T12:35:00'); // Imposta l'orario desiderato
     const currentTime = new Date();
 
     const timeDifference = scheduledTime.getTime() - currentTime.getTime();
+
+    this.esitoClick = 'Notifica programmata'
 
     if (timeDifference > 0) {
       setTimeout(() => {
