@@ -17,7 +17,7 @@ export class AppComponent {
 
   scheduleNotification() {
     this.notificationService.requestNotificationPermission();
-    const scheduledTime = new Date('2024-01-04T12:45:00'); // Imposta l'orario desiderato
+    const scheduledTime = new Date('2024-01-04T12:48:00'); // Imposta l'orario desiderato
     const currentTime = new Date();
 
     const timeDifference = scheduledTime.getTime() - currentTime.getTime();
