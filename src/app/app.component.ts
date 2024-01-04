@@ -13,11 +13,11 @@ export class AppComponent {
   constructor(
     private notificationService: NotificationService
   ) {
-    notificationService.requestNotificationPermission();
   }
 
   scheduleNotification() {
-    const scheduledTime = new Date('2024-01-04T12:35:00'); // Imposta l'orario desiderato
+    this.notificationService.requestNotificationPermission();
+    const scheduledTime = new Date('2024-01-04T12:45:00'); // Imposta l'orario desiderato
     const currentTime = new Date();
 
     const timeDifference = scheduledTime.getTime() - currentTime.getTime();
